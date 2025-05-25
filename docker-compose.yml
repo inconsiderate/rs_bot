@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    build: .
+    container_name: discord-bot
+    restart: unless-stopped
+    env_file: .env
+    working_dir: /app/public_bot
+    network_mode: host
+    command: node index.js
+    volumes:
+      - .:/app
