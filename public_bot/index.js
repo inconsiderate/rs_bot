@@ -26,7 +26,6 @@ function timestamp() {
 const mysql = require('mysql2/promise');
 const dbConfig = {
   host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
   user: process.env.DB_USER,
   port: process.env.DB_PORT || 3306,
   password: process.env.DB_PASS,
